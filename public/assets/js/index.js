@@ -1,6 +1,3 @@
-const fs = require('fs');
-const path = require('path');
-
 let noteTitle;
 let noteText;
 let saveNoteBtn;
@@ -183,10 +180,5 @@ if (window.location.pathname === '/notes') {
   noteText.addEventListener('keyup', handleRenderSaveBtn);
 }
 
-module.exports = {
-  getNotes,
-  saveNote,
-  deleteNote
-};
 
 getAndRenderNotes();
