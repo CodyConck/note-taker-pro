@@ -10,7 +10,7 @@ class Store {
         return readFileAsync('db/db.json', 'utf8')
     }
     write(note) {
-        return writeFileAsync('db/db,json', json.stringify(note))
+        return writeFileAsync('db/db.json', JSON.stringify(note))
     }
     getNotes() {
         return this.read()
@@ -25,6 +25,7 @@ class Store {
         })
     }
     addNote(note) {
+        console.log(note)
         const { title, text } = note
         if (!title || !text) {
             throw new Error('title and text cannot be blank')
